@@ -935,6 +935,13 @@ a:hover {
     display: flex;
 }
 
+@media screen and (max-height: 767px) {
+    #contact-form {
+        display: block;
+    }
+
+}
+
 /*======================================
 //--//-->   Products
 ======================================*/
