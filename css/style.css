@@ -935,7 +935,7 @@ a:hover {
     display: flex;
 }
 
-@media screen and (max-height: 767px) {
+@media screen and (max-height: 400px) {
     #contact-form {
         display: block;
     }
