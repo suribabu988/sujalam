@@ -2,7 +2,7 @@
 if(isset($_POST['email'])) {
  
     // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "pegasustradelinks@gmail.com";
+    $email_to = "";
     $email_subject = "Pegasus Inquiry Message";
  
     function died($error) {
@@ -18,7 +18,8 @@ if(isset($_POST['email'])) {
     // validation expected data exists
     if(!isset($_POST['fullname']) ||
         !isset($_POST['email']) ||
-        !isset($_POST['mobile'])) {
+        !isset($_POST['mobile']) ||
+        !isset($_POST['comments'])) {
         died('We are sorry, but there appears to be a problem with the form you submitted.');       
     }
  
@@ -27,6 +28,7 @@ if(isset($_POST['email'])) {
     $fullname = $_POST['fullname']; // required
     $email_from = $_POST['email']; // required
     $mobile = $_POST['mobile']; // not required
+    $comments = $_POST['comments']; // required
  
     $error_message = "";
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
@@ -63,6 +65,7 @@ if(isset($_POST['email'])) {
     $email_message .= "Your Name: ".clean_string($fullname)."\n";
     $email_message .= "Email: ".clean_string($email_from)."\n";
     $email_message .= "Phone: ".clean_string($mobile)."\n";
+    $email_message .= "Message: ".clean_string($comments)."\n";
     // return $email_message;
     
 // create email headers
