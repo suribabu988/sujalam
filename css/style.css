@@ -619,6 +619,12 @@ footer {
         font-size: 6rem;
     }
 }
+@media (max-width: 992px) {
+
+    .home_page .navbar-toggler span {
+        background-color: #000;
+    }
+}
 
 @media (min-width: 768px) {
 
